@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff; /* Setting text color to white */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bgAnimation 15s infinite alternate; /* Adding background animation */
+        }
+
+       
+        .register-container {
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Adding shadow with white color */
+            width: 300px;
+            text-align: center;
+            animation: fadeInAnimation 1s ease-in; /* Adding fade-in animation */
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0; /* Start with opacity 0 */
+            }
+            100% {
+                opacity: 1; /* Fade in to opacity 1 */
+            }
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #fff; /* White border */
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+            color: #fff; /* Text color white */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Create Account</h2>
+        <form id="registerForm" action="Register" method="post">
+            <input type="text" name="name" placeholder="Institute Name" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="submit" value="Create Account">
+        </form>
+        <p id="successMessage" style="display: none; color: green ; font-weight: 800;" >Successfully registered!</p>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</body>
+
+
+</html>
